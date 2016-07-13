@@ -37,7 +37,7 @@ $( document ).ready(function() {
     obj.data = {}
     obj.data.myDashIndctrOrdrngArray = arr;
     //
-    var jayson = JSON.stringify(str);
+    var jayson = JSON.stringify(obj);
     //
     console.log(jayson);
 });
