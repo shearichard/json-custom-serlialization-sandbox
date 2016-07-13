@@ -5,13 +5,6 @@ $( document ).ready(function() {
         //in.
         this.indicatorid = indId;
         this.panelform = panelForm;
-        this.getAttr = function(){
-            return this.indicatorid;
-        },
-        toJSON = function(){
-            debugger;
-            return {attr: this.getAttr()}; // everything that needs to get stored
-        }
     };
     /***********************************************
     IndctrOrdElem.prototype.toJSON() {
@@ -40,4 +33,11 @@ $( document ).ready(function() {
     var jayson = JSON.stringify(obj);
     //
     console.log(jayson);
+    //
+    var newobj = JSON.parse(jayson);
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+    console.log(newobj.data.myDashIndctrOrdrngArray[0].panelform);
+    console.log(newobj.data.myDashIndctrOrdrngArray[1].panelform);
+    console.log(newobj.data.myDashIndctrOrdrngArray[2].panelform);
+    console.log(newobj.data.myDashIndctrOrdrngArray[3].panelform);
 });
