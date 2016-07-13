@@ -9,6 +9,7 @@ $( document ).ready(function() {
             return this.indicatorid;
         },
         toJSON = function(){
+            debugger;
             return {attr: this.getAttr()}; // everything that needs to get stored
         }
     };
@@ -32,6 +33,9 @@ $( document ).ready(function() {
     arr.push(new IndctrOrdElem(5, 105));
     //
     var str = "{'data': {'myDashIndctrOrdrngArray':" + arr + "}}";
+    var obj = {}
+    obj.data = {}
+    obj.data.myDashIndctrOrdrngArray = arr;
     //
     var jayson = JSON.stringify(str);
     //
